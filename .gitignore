@@ -1,0 +1,4 @@
+/env/
+/cards_project/backend_api/__pycache__/
+/cards_project/__pycache__/
+*.pyc

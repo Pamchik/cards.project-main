@@ -1,0 +1,374 @@
+// Стили, используемые для подробной информации в карточке продукта
+
+
+
+// Верхний блок основной части
+.top-block {
+    display: flex;
+    flex-direction: row;
+    min-height: 30px;
+    border: 1px solid #bebebe;
+    background-color: #c4c4c43a;
+    border-radius: 15px;
+    margin: 0 0 10px 0;
+
+    &__order-info {
+        display: flex;
+        margin: auto auto auto 10px;
+        .top-block__order-title {
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 1px; 
+            font-weight: 600;                     
+        }  
+    }
+
+    &__status {
+        display: flex;
+        height: 20px;
+        margin: auto 20px;
+
+        
+        .top-block__label {
+            text-align: center;
+            font-size: 14px;
+            height: 100%;
+            margin: 0 10px;
+            padding: 1% 0;
+        }
+        .order-status {
+            height: 100%;
+            width: 200px;
+            border-radius: 7px;
+            text-align-last: center;
+            font-size: 14px; 
+        }
+        // .submit-status-icon {
+        //     height: 20px;
+        //     width: 20px;
+        //     text-align: center;
+        //     padding: 2px;
+        //     background-color: transparent;   
+        //     border: none;
+        //     border-radius: 7px; 
+        //     margin: 0;
+        //     color: green;
+
+        //     &:hover {
+        //         background-color: green; 
+        //         color: white;
+        //     }
+        // }
+
+        // .reset-status-icon {
+        //     height: 20px;
+        //     width: 20px;
+        //     text-align: center;
+        //     vertical-align: middle;
+        //     padding: 2px;
+        //     background-color: transparent;   
+        //     border: none;
+        //     border-radius: 7px; 
+        //     margin: 0;
+        //     color: red;
+
+        //     &:hover {
+        //         background-color: red; 
+        //         color: white;                
+        //     }
+        // }
+    }
+}
+
+// Страница с информацией по карте из заказа
+.detailed-product-card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+// Нижний блок основной части
+.bottom-block {
+    display: block;
+    flex: 1 1 auto;
+    overflow: hidden;
+}
+
+// Вкладка с общей информацией по заказу
+.general-card-info {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex: 0 0 auto;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-bottom: 2px;
+        &:after {
+            content: ''; 
+            position: absolute;
+            bottom: 0; 
+            left: 0;
+            width: 100%;
+            height: 1px;
+            border-bottom: 2px solid #b9b9b9;
+        }
+    }
+    
+    &__block-picture {
+        display: flex;
+        flex: 1 0 auto;
+        max-width: 300px;
+        max-height: 220px;
+        // height: 100%;
+        margin: 0 0 0 10px;
+    }
+
+    &__form {
+        margin: 0px auto;
+        position: relative;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;        
+    }
+
+    &__picture {
+        height: 80%;
+        width: 100%;
+    }  
+
+    &__label {
+    margin-top: 5px;
+
+        svg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='green' class='bi bi-check2' viewBox='0 0 16 16'%3E%3Cpath d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+            width: 16px;
+            height: 16px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    &__input[type="file"] {
+    display: none;
+    &::-webkit-file-upload-button {
+        visibility: hidden;
+        }
+    }
+
+    &__block-create-modify {
+        display: flex;
+        flex: 1 1 auto;
+        height: 100%;
+        // margin: 0 auto;
+    }
+
+    &__line-info {
+        flex: 1 1 auto;
+        display: inline-block;
+        // margin: 0 5px auto 20px;
+        font-size: 14px;
+    }
+
+    &__date {
+        display: block;
+        flex: 1 1 auto;
+        margin: 0 5px 5px 0;
+        font-size: 14px;
+    }
+
+    // &__block-btn-comments {
+        // flex: 1 1 auto;
+        // display: flex;
+        // flex-direction: column;
+        // min-width: 350px;
+        // max-width: 700px;
+        // height: 100%;
+        // // max-width: 1100px;
+    // }
+
+    &__btn {
+        display: flex;
+        justify-content: end;
+        margin: 0 0 2px 0;
+        flex: 0 0 auto;
+        // background-color: #b8bef9;
+        // background-color: #b8bef9;
+        box-shadow: inset 0 40px 40px -40px #ffffffe8;
+        border-radius: 10px 10px 0 0;
+        padding: 3px 5px;
+        border-bottom: 1px solid #bebebe;
+    }
+
+    &__comment {
+        display: block;
+        flex: 1 1 auto;
+        padding: 0 5px;   
+        min-width: 350px;
+        max-width: 700px;
+        height: 100%;
+    }
+
+    &__full-info {
+        display: block;
+        flex: 1 1 auto;
+        width: 100%; 
+        max-height: 100%;  
+        overflow-y: scroll;
+    }
+
+    .w80 {
+        max-width: 80px;
+    }
+
+    .w150 {
+        max-width: 150px;
+    }
+
+    .w200 {
+        max-width: 200px;
+    }
+}    
+
+// Вкладка с детальной/подробной информацией по заказу
+.detailed-card-info {
+    height: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+// Вкладки для просмотра и загрузки документов
+.document-control-form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px 3px #c7c7c7;
+    border-radius: 10px;
+
+    &__status-file-comment-block {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        // margin-bottom: 10px;
+        padding-bottom: 10px;
+        border: 1px solid #bebebe;
+        // border-right: 1px solid #bebebe;
+        border-bottom: none;
+        border-radius: 0;
+
+        &:after {
+            content: ''; 
+            position: absolute;
+            bottom: 1px;
+            left: 5px;
+            width: calc(100% - 10px);
+            height: 1px;
+            border-bottom: 2px solid #b9b9b9;
+        }
+    }
+
+    &__block-status-file {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+    &__status {
+        display: flex;
+        text-align-last: center;
+        // margin: auto 0 -3px 0;
+        // margin: 25px 0 auto 0;
+    }
+
+    &__add-file-btn {
+        margin: 5px auto 0 5px;
+    }
+
+    // &__block-btn-comments {
+    //     flex: 1 1 auto;
+    //     display: flex;
+    //     flex-direction: column;
+    //     min-width: 350px;
+    //     max-width: 700px;
+    //     height: 100%;
+    // }
+
+    // &__test {
+    //     display: inline-block;
+    //     border: 1px solid #000;
+    //     width: 400px;
+
+    // }
+
+    &__btn-block {
+        display: flex;
+        // width: 100%;
+        justify-content: end;
+        // margin: 5px 5px 2px 0;
+        border: 1px solid #bebebe;
+        border-bottom: none;
+        border-radius: 10px 10px 0 0;
+        // background-color: #b8bef9;
+        box-shadow: inset 0 40px 40px -40px #ffffffe8;
+        padding: 3px 5px;
+
+    }
+
+    &__comment {
+        display: block;
+        flex: 1 1 auto;
+        padding: 0 5px;   
+        min-width: 350px;
+        max-width: 500px;
+        height: 100%;
+        // margin-bottom: 20px;
+    }
+
+    &__table-block {
+        display: block;
+        height: auto;
+        border: 1px solid #bebebe;
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        padding: 10px 5px;
+        // margin-top: 10px;
+        // overflow-y: scroll;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// сделать общий класс!!!!!!!
+// .info-label {
+//     margin: 0 0 10px 0;
+//     .info-input {
+//         background-color: transparent;
+//         font-weight: bold;
+//         // max-width: 150px;
+//     }
+// }
